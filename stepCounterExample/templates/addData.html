@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Data</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div id ="menu">
+        <table border="1">
+            <tr>
+                <td><a href="/">Home</a></td>
+                <td><a href="/viewData">See Data</a></td>
+                <td><a href="/addData">Add Data</a></td>
+            </tr>
+    </table>
+    </div>
+   <h1>Add new Data</h1> 
+
+    <form action="{{ url_for("add_data")}}" method="post">
+        <label for="date">Date:</label>
+        <input type="text" id="date" name="date" placeholder="Date">
+        <label for="steps">Steps:</label>
+        <input type="text" id="steps" name="steps" placeholder="Steps">
+        <button type="submit">Submit</button>
+    </form>
+
+
+</body>
+</html>
