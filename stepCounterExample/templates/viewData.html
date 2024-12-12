@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Data</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div id ="menu">
+        <table border="1">
+            <tr>
+                <td><a href="/">Home</a></td>
+                <td><a href="/viewData">See Data</a></td>
+                <td><a href="/addData">Add Data</a></td>
+            </tr>
+    </table>
+    </div>
+   <h1>My Data Loop 1</h1> 
+   <table border="1">
+    <tr><th>Date</th><th>Steps</th></tr>
+    {% for item in info %}
+    <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+    </tr>
+
+    {% endfor %}
+   </table>
+      <h1>My Data Loop 2</h1> 
+   <table border="1">
+    <tr><th>Date</th><th>Steps</th></tr>
+    {% for date,steps in info %}
+    <tr>
+        <td>{{date}}</td>
+        <td>{{steps}}</td>
+    </tr>
+
+    {% endfor %}
+   </table>
+   <img src="static/mySteps.png" alt="graph of my steps">
+</body>
+</html>
